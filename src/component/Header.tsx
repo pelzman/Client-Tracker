@@ -1,5 +1,6 @@
 import { Button } from "./Button"
 import { useLocation } from "react-router-dom"
+import { Link } from "react-router-dom"
 interface HeaderType {
     title?: string
     onAdd: () => void
@@ -21,6 +22,8 @@ const Header: React.FC<HeaderType> = ({ title, onAdd, showTask }) => {
                 text={showTask ? "Close" : "Add"}
                 backgroundColor={showTask ? "red" : "green"}
                 onClick={onAdd} />)}
+
+               <Link to="/"><Button text="Logout" className="bg-red-500 text-white"/></Link> 
         </header>
     )
 }
