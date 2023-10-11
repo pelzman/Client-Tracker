@@ -14,10 +14,10 @@ const Header: React.FC<HeaderType> = ({ title, onAdd, showTask }) => {
     const location = useLocation()
     return (
         <header className="header">
-            {<h1>{title}</h1>}
+            {<h1 className="text-[24px]">{title}</h1>}
 
 
-            {location.pathname === '/' && (<Button className={`${showTask ? color : " "}  btn`}
+            {location.pathname === '/home' && (<Button className={`${showTask ? color : " "}  btn`}
                 text={showTask ? "Close" : "Add"}
                 backgroundColor={showTask ? "red" : "green"}
                 onClick={onAdd} />)}
