@@ -84,30 +84,30 @@ function App() {
 
   return (
     <div className="container">
-    <Header onAdd={() => setAddTask(!showAddTask)} showTask={showAddTask} />
-          <Routes>
-          
-            <Route path="/home"  element={(
-              <>
-            
-          {showAddTask && <AddTask onAdd={addTask} />}
-          { tasks.length >0 ?(
-          <Task tasks={tasks} onDelete={deleteTask} onToggle={onToggle} />):
-          "No Task to show"
-  } 
-              </>
-            )}>
-      
-            </Route>
-          
-       
-   <Route path="/about" element={<About/>}></Route>
+      <Header onAdd={() => setAddTask(!showAddTask)} showTask={showAddTask} />
+      <Routes>
 
-  
-   </Routes>
-          <Footer />
-          
-        </div>
+        <Route path="/" element={(
+          <>
+
+            {showAddTask && <AddTask onAdd={addTask} />}
+            {tasks.length > 0 ? (
+              <Task tasks={tasks} onDelete={deleteTask} onToggle={onToggle} />) :
+              "No Task to show"
+            }
+          </>
+        )}>
+
+        </Route>
+
+
+        <Route path="/about" element={<About />}></Route>
+
+
+      </Routes>
+      <Footer />
+
+    </div>
   )
 }
 

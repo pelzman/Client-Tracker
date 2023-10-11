@@ -17,7 +17,7 @@ const Header: React.FC<HeaderType> = ({ title, onAdd, showTask }) => {
             {<h1>{title}</h1>}
 
 
-            {location.pathname === '/e' && (<Button className={`${showTask ? color : " "}  btn`}
+            {location.pathname === '/' && (<Button className={`${showTask ? color : " "}  btn`}
                 text={showTask ? "Close" : "Add"}
                 backgroundColor={showTask ? "red" : "green"}
                 onClick={onAdd} />)}

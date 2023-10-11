@@ -1,19 +1,10 @@
 {
-  "posts": [
+  "tasks": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
+      "text": "gdg",
+      "day": "hdhhhd",
+      "reminder": false,
+      "id": 2
     }
-  ],
-  "comments": [
-    {
-      "id": 1,
-      "body": "some comment",
-      "postId": 1
-    }
-  ],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }
